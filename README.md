@@ -29,15 +29,41 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 ## Logic Diagram
 ## Procedure
 ## Program:
-/*
+
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: AKASH R
+RegisterNumber:22008463  
+Using NANAD gate
+   module exp1(a,b,c,d,f);
+   input a,b,c,d;
+   output f;
+   wire p,q,r;
+   assign p=(~c & b & a);
+   assign q=(~d & c & ~a);
+   assign r=(c & ~b & a);
+   assign f=(~(~p & ~q & ~r));
+   endmodule
+Using NOR gate
+   module exp2(a,b,c,d,f);
+   input a,b,c,d;
+   output f;
+   wire p,q,r;
+   assign p=( c & ~b & a);
+   assign q=( d & ~c & a);
+   assign r=( c & ~b & a);
+   assign f=(~(~( p | q | r)));
+   endmodule
 ## RTL realization
 
 ## Output:
 ## RTL
+![WhatsApp Image 2023-01-19 at 20 39 59](https://user-images.githubusercontent.com/123085535/213481058-ced292b3-83ef-40f9-98dc-8f536d482bd5.jpg)
+![WhatsApp Image 2023-01-19 at 20 43 08](https://user-images.githubusercontent.com/123085535/213481120-def2f542-0cc1-4a9e-86b4-6e196b989334.jpg)
+![WhatsApp Image 2023-01-19 at 20 41 39](https://user-images.githubusercontent.com/123085535/213481220-8a30b208-cc5f-423e-a26b-6bcafb40c54c.jpg)
+![WhatsApp Image 2023-01-19 at 20 44 53](https://user-images.githubusercontent.com/123085535/213481273-d64f362a-44f5-4b42-aa81-874283a748d3.jpg)
+![WhatsApp Image 2023-01-19 at 20 40 51](https://user-images.githubusercontent.com/123085535/213481366-599d20e3-699b-4ed0-958b-9cba4bb2a08c.jpg)
+![WhatsApp Image 2023-01-19 at 20 44 01](https://user-images.githubusercontent.com/123085535/213481423-609fb512-cd41-4db5-b514-2c36ba4056a7.jpg)
+
 ## Timing Diagram
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
